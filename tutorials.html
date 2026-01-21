@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutorials - Aalif</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1>Aalif Ahmed</h1>
+    <div class="nav-tabs">
+      <a href="index.html" class="tab-btn">Home</a>
+      <a href="projects.html" class="tab-btn">Projects</a>
+        </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text fade-in">
+      <h2>Tutorials</h2>
+      <p>Step-by-step guides for my projects. Scroll down to see all steps and download files.</p>
+    </div>
+  </section>
+<!-- HERO -->
+<section class="hero" style="text-align:center;">
+  <div class="hero-text fade-in">
+    <h2>Pico Ducky Tutorial</h2>
+    <p>Step-by-step guide to turn your Raspberry Pi Pico into a USB Rubber Ducky using CircuitPython.</p>
+  </div>
+  <div class="hero-image fade-in delay">
+    <img src="./images/pico.jpg" alt="Raspberry Pi Pico" 
+         style="width:300px; max-width:100%; border-radius:12px; 
+                margin:20px auto; filter: drop-shadow(0 0 25px rgba(34,197,94,0.5)); 
+                display:block;">
+  </div>
+</section>
+
+
+
+    <div class="step-card">
+      <span class="step-num">1</span>
+      <h3>Download & Extract</h3>
+      <p>Download the <b>Pico Ducky 10.zip</b> and extract it to a folder on your PC.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">2</span>
+      <h3>Enter BOOTSEL Mode</h3>
+      <p>Plug your Pico while holding the <b>BOOTSEL</b> button. It will appear as <b>RPI-RP2</b>.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">3</span>
+      <h3>Flash CircuitPython</h3>
+      <p>Copy the <b>.uf2</b> file to the root of <b>RPI-RP2</b>. Pico will reboot as <b>CIRCUITPY</b>.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">4</span>
+      <h3>Extract Libraries</h3>
+      <p>Extract <b>adafruit-circuitpython-bundle-10.x-mpy-YYYYMMDD.zip</b>.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">5</span>
+      <h3>Copy adafruit_hid</h3>
+      <p>Navigate to <b>lib</b> in the bundle and copy <b>adafruit_hid</b> to <b>CIRCUITPY/lib</b>.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">6</span>
+      <h3>Copy Other Libraries</h3>
+      <p>Copy <b>adafruit_debouncer.mpy</b>, <b>adafruit_ticks.mpy</b>, <b>asyncio</b>, and <b>adafruit_wsgi</b> to <b>CIRCUITPY/lib</b>.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">7</span>
+      <h3>Copy Pico Ducky Files</h3>
+      <p>Copy <b>boot.py</b>, <b>duckyinpython.py</b>, <b>code.py</b>, <b>pins.py</b>, <b>webapp.py</b>, <b>wsgiserver.py</b> to <b>CIRCUITPY root</b>.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">8</span>
+      <h3>Add Payload</h3>
+      <p>Create a DuckyScript file and save it as <b>payload.dd</b> in <b>CIRCUITPY root</b>.</p>
+      <a href="https://payloadhub.com/blogs/payloads/tagged/usb-rubber-ducky"
+         target="_blank"
+         class="btn-download"
+         style="display:inline-block; margin-top:10px;">
+        🌐 Browse Payloads on PayloadHub
+      </a>
+    </div>
+  </section>
+<!-- WARNING -->
+<section class="warning fade-in" style="max-width:900px; margin:50px auto; padding:25px; border-left:5px solid #facc15; border-radius:10px; background:#010314;">
+  <h3>⚠ Important</h3>
+  <p>
+    Pico Ducky supports DuckyScript 1.0 and partial 3.0.  
+    If the device is not in setup mode, the payload may execute automatically.  
+    Test only on your own PC.
+  </p>
+</section>
+
+
+  <!-- DOWNLOADS -->
+  <section id="downloads" style="max-width:1000px; margin:50px auto; padding:0 50px;">
+    <h2>Downloads</h2>
+
+    <div class="step-card">
+      <h3>All-in-One Package</h3>
+      <a href="Pico Ducky 10.zip" download class="btn-download">⬇ Download Pico Ducky 10.zip</a>
+      <p style="margin-top:8px; font-size:0.9rem; color:#94a3b8;">
+        Contains everything: Pico Ducky clone, libraries, and setup scripts.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <h3>Separate Files</h3>
+
+      <a href="adafruit-circuitpython-bundle-10.x-mpy-20260116.zip" download class="btn-download">⬇ Adafruit Bundle</a>
+      <a href="adafruit-circuitpython-raspberry_pi_pico-en_US-9.0.4.uf2" download class="btn-download">⬇ CircuitPython UF2</a>
+      <a href="pico-ducky-main.zip" download class="btn-download">⬇ Pico Ducky Clone</a>
+
+      <p style="margin-top:8px; font-size:0.85rem; color:#94a3b8;">
+        Credits: This project is based on <a href="https://github.com/dbisu" target="_blank" style="color:#22c55e;">dbisu’s Pico Ducky</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 • Aalif Ahmed • Educational Use Only</p>
+  </footer>
+</body>
+</html>
